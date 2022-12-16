@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+/*RESET CSS=========================================================*/
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, img {
+	display: block;
+}
+body {
+	min-height: 100vh;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+p, h1, h2, h3, h4, h5, h6{
+	overflow-wrap: break-word;
+}
+
+img, picture, video, canvas, svg{
+	max-inline-size: 100%;
+	block-size: auto;
+}
+
+a{text-decoration: none;}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*============================================================================*/
+:root{
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+body{
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background: url('images/bg-mobile.svg');
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: var(--Violet);
+    padding: 30px;
+}
+
+.logo{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width:180px;
+}
+
+.container{
+    color: #fff;
+    display: grid;
+    /*grid-template-columns: repeat(2, 1fr); @MEDIA*/
+}
+
+.mockups{
+    padding-top: 60px;
+}
+
+.description{text-align: center;}
+
+.description .page-heading{
+    padding-top: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 30px;
+}
+
+.description .paragraph-desc{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 25px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 30px;
+}
+
+.description .button{
+    display: inline-block;
+    background-color: #fff;
+    padding: 10px 60px;
+    border-radius: 30px;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.description .button:hover{
+    background-color: var(--Soft-Magenta);
+    color: #fff;
+}
+
+.social-media{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.social-media img{
+    width: 48px;
+    padding-right: 20px;
+    filter: invert(100%);/*inverte cor de preto para branco*/
+}
+
+.social-media img:hover{
+    cursor: pointer;
+}
+
+
+
+@media (min-width:37.5em){/*600*/
+    body{
+        background: url('images/bg-desktop.svg');
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: var(--Violet);
+    }
+    .container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .description{
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+    .social-media{
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (min-width:56.25em){/*900*/
+    body{
+        background: url('images/bg-desktop.svg');
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: var(--Violet);
+        padding: 60px;
+    }
+    .container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .logo{
+        top: 60px;
+        left: 60px;
+        width:210px;
+    }
+    .description .page-heading{
+        text-align: left;
+        padding-right: 70px;
+        font-size: 35px;
+        line-height: 45px;
+        padding-top: 20px;
+    }
+    .description .paragraph-desc{
+        text-align: left;
+        padding-top: 20px;
+        padding-left: 0;
+        padding-right: 100px;
+        padding-bottom: 30px;
+    }
+    .description{
+        margin-left: 40px;
+        margin-top: 50px;
+    }
+    .description .button{
+       float:left ;
+       padding: 15px 60px;
+    }
+    .social-media{
+        position: absolute;
+        bottom: 40px;
+        right: 40px;
+    }
+}
+
